@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | MyShop</title>
+    <style>
+        body { font-family: Arial; margin: 0; background: #f4f4f4; }
+        header { background: #222; color: #fff; padding: 15px; }
+        a { color: #fff; margin-right: 15px; text-decoration: none; }
+        .container { padding: 20px; }
+        .cart-item {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="login.html">Login</a>
+</header>
+
+<div class="container">
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+        <p>Product 1 - $19.99</p>
+    </div>
+
+    <div class="cart-item">
+        <p>Product 2 - $29.99</p>
+    </div>
+
+    <h3>Total: $49.98</h3>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+    function checkout() {
+        alert("Checkout successful!");
+    }
+</script>
+
+</body>
+</html>
