@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products | MyShop</title>
+    <style>
+        body { font-family: Arial; margin: 0; background: #f4f4f4; }
+        header { background: #222; color: #fff; padding: 15px; }
+        a { color: #fff; margin-right: 15px; text-decoration: none; }
+        .container { padding: 20px; }
+        .product {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+
+    <div class="product">
+        <h3>Product 1</h3>
+        <p>Price: $19.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Product 2</h3>
+        <p>Price: $29.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Product 3</h3>
+        <p>Price: $39.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
+<script>
+    function addToCart() {
+        alert("Product added to cart!");
+        window.location.href = "cart.html";
+    }
+</script>
+
+</body>
+</html>
