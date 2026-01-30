@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyShop | Home</title>
+    <title>MyShop | Avengers Store</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
         }
 
         header {
-            background-color: #222;
-            color: #fff;
-            padding: 15px 20px;
+            background: linear-gradient(90deg, #8B0000, #1E90FF, #6A0DAD);
+            padding: 18px 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
         }
 
         nav {
@@ -23,67 +25,127 @@
             align-items: center;
         }
 
+        nav h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            color: gold;
+            text-shadow: 0 0 10px red;
+        }
+
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 15px;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: gold;
+            text-shadow: 0 0 10px gold;
         }
 
         .hero {
-            background-color: #fff;
-            padding: 50px 20px;
             text-align: center;
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at top, rgba(255,0,0,0.4), transparent),
+                radial-gradient(circle at bottom, rgba(0,0,255,0.4), transparent);
         }
 
         .hero h1 {
-            margin-bottom: 10px;
+            font-size: 50px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, red, gold, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
         }
 
         .hero button {
-            padding: 12px 20px;
-            background-color: #007bff;
-            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff0000, #ffd700);
+            color: #000;
             border: none;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 16px;
+            box-shadow: 0 0 20px rgba(255,215,0,0.8);
+            transition: 0.3s;
         }
 
         .hero button:hover {
-            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255,215,0,1);
         }
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 40px;
         }
 
         .product {
-            background: #fff;
-            padding: 15px;
+            background: linear-gradient(145deg, #111, #222);
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            transition: 0.4s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 25px rgba(255,215,0,0.8);
+        }
+
+        .product h3 {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .product a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #1E90FF, #00ffff);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .product a:hover {
+            background: linear-gradient(90deg, gold, red);
         }
 
         footer {
-            background-color: #222;
-            color: #fff;
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 15px;
+            background: #000;
+            font-size: 14px;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.7);
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <nav>
-        <h2>MyShop</h2>
+        <h2>⚡ Avengers Shop ⚡</h2>
         <div>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
@@ -94,31 +156,33 @@
 </header>
 
 <section class="hero">
-    <h1>Welcome to MyShop</h1>
-    <p>Your one-stop shop for everything!</p>
-    <button onclick="goToProducts()">Shop Now</button>
+    <h1>Assemble Your Power</h1>
+    <p>Exclusive Avengers gear forged with hero-level strength</p>
+    <button onclick="goToProducts()">Enter the Battle</button>
 </section>
 
 <section class="products">
     <div class="product">
-        <h3>Product 1</h3>
+        <h3>Iron Man Tech</h3>
         <p>$19.99</p>
         <a href="products.html">View</a>
     </div>
+
     <div class="product">
-        <h3>Product 2</h3>
+        <h3>Captain Shield</h3>
         <p>$29.99</p>
         <a href="products.html">View</a>
     </div>
+
     <div class="product">
-        <h3>Product 3</h3>
+        <h3>Thor Hammer</h3>
         <p>$39.99</p>
         <a href="products.html">View</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 MyShop. All rights reserved.</p>
+    <p>© 2026 Avengers Store | Power Comes With Style</p>
 </footer>
 
 <script>
