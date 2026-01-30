@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop | Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+        }
+
+        .hero button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .hero button:hover {
+            background-color: #0056b3;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MyShop</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to MyShop</h1>
+    <p>Your one-stop shop for everything!</p>
+    <button onclick="goToProducts()">Shop Now</button>
+</section>
+
+<section class="products">
+    <div class="product">
+        <h3>Product 1</h3>
+        <p>$19.99</p>
+        <a href="products.html">View</a>
+    </div>
+    <div class="product">
+        <h3>Product 2</h3>
+        <p>$29.99</p>
+        <a href="products.html">View</a>
+    </div>
+    <div class="product">
+        <h3>Product 3</h3>
+        <p>$39.99</p>
+        <a href="products.html">View</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MyShop. All rights reserved.</p>
+</footer>
+
+<script>
+    function goToProducts() {
+        window.location.href = "products.html";
+    }
+</script>
+
+</body>
+</html>
